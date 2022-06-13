@@ -58,7 +58,7 @@ const JobApplication = () => {
             method: "POST",
             body: formData
         };
-        fetch("http://localhost:8080/job-app-sys-api/applications/uploadFile", options);
+        fetch("https://simple-job-application-backend.herokuapp.com/job-app-sys-api/applications/uploadFile", options);
     }
 
     let responseData
@@ -67,7 +67,7 @@ const JobApplication = () => {
 
         try {
             responseData = await sendRequest(
-                "http://localhost:8080/job-app-sys-api/applications/create-application",
+                "https://simple-job-application-backend.herokuapp.com/job-app-sys-api/applications/create-application",
                 'POST',
                 JSON.stringify({
                     firstname: data.firstname,

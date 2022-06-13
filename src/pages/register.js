@@ -22,7 +22,7 @@ const Register = () => {
         
         try {
             const responseData = await sendRequest(
-                "http://localhost:8080/job-app-sys-api/users",
+                "https://simple-job-application-backend.herokuapp.com/job-app-sys-api/users",
                 'POST',
                 JSON.stringify({
                     fullName: data.fullName,
